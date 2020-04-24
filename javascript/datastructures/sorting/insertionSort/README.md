@@ -1,0 +1,9 @@
+Insertion Sort
+
+Builds up the sort by gradually creating a larger left half which is always sorted
+
+Strategy
+    Start by picking the second element in the array
+    Now compare the second element with the one before it and swap if necessary
+    Continue to the next element and if it is in the incorrect order, iterate through the sorted portion (the left side) to place the element in the corrct place
+    Repeat until the array is sorted

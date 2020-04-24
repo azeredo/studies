@@ -29,7 +29,6 @@ Telling JavavaScript how to sort
         It it returns a positive number, a should come after b
         If it returns 0, a and b are the same as far as the sort is concerned
 
-
 function numberCompare(num1, num2) {
     return num1 - num2
 }
@@ -41,3 +40,26 @@ function compareByLen(str1, str2) {
 console.log([6,4,15,10].sort(numberCompare))
 
 console.log(['Moises', 'Pedro', 'João', 'Alabama'].sort(compareByLen))
+
+Before we sort, we must swap
+
+Many sorting algorithms involve some type of swapping functionality (swapping to numbers to put them in order)
+
+//ES5
+function swap(arr, idx1, idx2) {}
+    var temp = arr[idx1]
+    arr[idx1] = arr[idx2]
+    arr[idx2] = temp
+}
+
+//ES2015
+function swap(arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2],arr[idx1]]
+}
+
+Big O
+Bubble Sor, Insertion Sort and Selection Sort have "equal" performance
+Time Complexity (best scenario) O(n), O(n), O(n²)
+Time Complexity (average scenario) O(n²), O(n²), O(n²)
+Time Complexity (worts scenario) O(n²), O(n²), O(n²)
+Space Complexity O(n)
